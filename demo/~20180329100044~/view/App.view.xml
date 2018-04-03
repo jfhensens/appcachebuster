@@ -1,0 +1,18 @@
+<mvc:View
+  controllerName="be.infrabel.demo.controller.App"
+  displayBlock="true"
+  xmlns="sap.m"
+  xmlns:mvc="sap.ui.core.mvc">
+  <App>
+    <pages>
+      <Page
+        title="{i18n>homePageTitle}">
+        <content>
+          <mvc:XMLView
+            viewName="be.infrabel.demo.view.Welcome">
+          </mvc:XMLView>
+        </content>
+      </Page>
+    </pages>
+  </App>
+</mvc:View>

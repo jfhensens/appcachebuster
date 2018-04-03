@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <title>SAPUI5 - Cache Buster</title>
+    <script 
+      type="text/javascript"
+      src="sap-ui-config.js">
+    </script>
+    <script
+      type="text/javascript"
+      src="appCacheBuster-hooks.js">
+    </script>
+    <script
+      id="sap-ui-bootstrap"
+      type="text/javascript"
+      src="resources/sap-ui-core.js">
+    </script>
+    <script
+      type="text/javascript">
+      sap.ui.getCore().attachInit(function () {
+        var oAppCompContainer = new sap.ui.core.ComponentContainer({
+          height: "100%"
+        });
+
+        new sap.m.Shell({
+          app: oAppCompContainer,
+          showLogout: false
+        }).placeAt("content");
+
+        var oComponent = sap.ui.component({
+          name: "be.infrabel.demo",
+          manifestFirst: false,
+          async: true
+        }).then(function (oComponent) {
+          oAppCompContainer.setComponent(oComponent);
+        })
+      });
+    </script>
+  </head>
+  <body class="sapUiBody" id="content">
+
+  </body>
+</html>

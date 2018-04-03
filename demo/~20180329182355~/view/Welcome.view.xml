@@ -1,0 +1,19 @@
+<View
+  controllerName="be.infrabel.demo.controller.Welcome"
+  xmlns="sap.m"
+  xmlns:mvc="sap.ui.core.mvc">
+  <Panel
+    headerText="{i18n>welcomePanelTitle}"
+    class="sapUiResponsiveMargin"
+    width="auto">
+    <content>
+      <Button 
+        icon="sap-icon://world"
+        text="{i18n>welcomeButtonText}"
+        press="onWelcomeButtonPressed"/>
+      <Text
+        text="Hello, Jeff!"
+        class="sapUiSmallMargin" />
+    </content>
+  </Panel>
+</View>
